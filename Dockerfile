@@ -25,6 +25,8 @@ RUN GITHUB_REPO="https://github.com/mattn/goreman" \
 # goreman setup
 RUN echo "web: gosu dummy /bin/busybox httpd -f -p 8080 -h /webui-aria2\nbackend: gosu dummy /usr/bin/aria2c --enable-rpc --rpc-listen-all --dir=/data" > Procfile
 
+RUN chmod dummy:dummy /data
+
 # aria2 downloads directory
 VOLUME /data
 
