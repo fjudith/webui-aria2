@@ -58,8 +58,6 @@ translations.nl_NL = {
     '- You can also add multiple URIs (mirrors) for the *same* file. To do this, separate the URIs by a space.':
         '- Je kunt ook meerdere URIs (mirrors) voor *hetzelfde* bestand toevoegen. Scheidt hiervoor de URIs met een spatie.',
     '- A URI can be HTTP(S)/FTP/BitTorrent-Magnet.': '- Een URI kan HTTP(S)/FTP/BitTorrent-Magnet zijn.',
-    'E.g. to add 2 files (downloads) f1.jpg and f2.mp4 with 2 URIs (mirrors) each, add URIs as follows':
-        'Bijvoorbeeld, voor het toevoegen van 2 bestanden (downloads) f1.jpg en f2.mp4 met 2 URIs (mirrors) elk, voeg de URIs op deze manier:',
     'Download settings': 'Download instellingen',
     'Advanced settings': 'Geavanceerde instellingen',
     'Cancel': 'Annuleren',
@@ -108,6 +106,7 @@ translations.nl_NL = {
         'Als ingevoerd dan worden links aangemaakt die het direct downloaden van de Aria2 server toestaan.',
     '(Requires appropriate webserver to be configurured.)': 'Hiervoor moet een geschikte webserver worden ingericht.)',
     'Save Connection configuration': 'Verbindingsconfiguratie opslaan',
+    'Filter': 'Filter',
 // server info modal
     'Aria2 server info': 'Aria2 server informatie',
     'Aria2 Version': 'Aria2 versie',

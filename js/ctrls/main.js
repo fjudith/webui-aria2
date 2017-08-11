@@ -9,11 +9,11 @@ angular
 	'$scope', '$name', '$enable', '$rpc', '$rpchelpers', '$utils', '$alerts', '$modals',
 	'$fileSettings', '$activeInclude', '$waitingExclude', '$pageSize', '$getErrorStatus',
 	// for document title
-	'$rootScope',
+	'$rootScope', '$filter',
 function(
 	scope, name, enable, rpc, rhelpers, utils, alerts, modals,
 	fsettings, activeInclude, waitingExclude, pageSize, getErrorStatus,
-	rootScope
+	rootScope, filter
 ) {
 
 	scope.name = name;	 // default UI name
@@ -26,6 +26,7 @@ function(
 	scope.active = [], scope.waiting = [], scope.stopped = [];
 	scope.gstats = {};
 	scope.hideLinkedMetadata = true;
+	scope.propFilter = "";
 
 	// pause the download
 	// d: the download ctx
@@ -82,7 +83,9 @@ function(
 		// HACK to make sure an angular digest is not running, as only one can happen at a time, and confirm is a blocking
 		// call so an rpc response can also trigger a digest call
 		setTimeout(function() {
-			if (!noConfirm && !confirm("Remove %s and associated meta-data?".replace("%s", d.name))) {
+			if (!noConfirm && !confirm(
+				filter('translate')('Remove {{name}} and associated meta-data?',
+					{ name: d.name }))) {
 				return;
 			}
 
@@ -449,8 +452,8 @@ function(
 			} else if (ctx.verifyIntegrityPending !== d.verifyIntegrityPending) {
 				ctx.verifyIntegrityPending = d.verifyIntegrityPending;
 			}
-			if (ctx.uploadLength !== d.uploadength) {
-				ctx.uploadLength = d.uploadlength;
+			if (ctx.uploadLength !== d.uploadLength) {
+				ctx.uploadLength = d.uploadLength;
 				ctx.fmtUploadLength = utils.fmtsize(d.uploadLength);
 			}
 			if (ctx.pieceLength !== d.pieceLength) {
@@ -565,6 +568,16 @@ function(
 		return percentage;
 	};
 
+	// gets the upload ratio
+	scope.getRatio = function(d) {
+		var ratio = 0
+		ratio = (d.uploadLength / d.completedLength) || 0;
+		ratio = ratio.toFixed(2);
+		if(!ratio) ratio = 0;
+
+		return ratio;
+	};
+
 	// gets the type for the download as classified by the aria2 rpc calls
 	scope.getType = function(d) {
 		var type = d.status;
@@ -624,5 +637,18 @@ function(
 	scope.moveUp = function (d) {
 	    rpc.once('changePosition', [d.gid, -1, 'POS_CUR']);
 	};
+}])
+.filter('objFilter', function(){
+	return function(input, filter) {
+		input = input || {};
+		var out = {};
 
-}]);
+		for(key in input) {
+			if (key.startsWith(filter)){
+				out[key] = input[key];
+			}
+		}
+
+		return out;
+	};
+});

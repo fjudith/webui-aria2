@@ -39,16 +39,13 @@ translations.it_IT = {
     'Paused': 'In pausa',
     'Removed': 'Rimossi',
     'Hide linked meta-data': 'Nascondi i meta-data collegati',
-    'Displaying': 'Mostra',
-    'of': 'di',
-    'downloads': 'downloads',
     'Toggle': 'Cambia',
     'Reset filters': 'Reimposta filtri',
 // starred properties
     'Quick Access Settings': 'Accesso rapido',
     'Save settings': 'Salva impostazioni',
-    'Currently no download in line to display, use the': 'Attualmente non c\'è nessun download da mostrare, usa il',
-    'download button to start downloading files!': 'pulsante Aggiungi per cominciare a scaricare!',
+    'Currently no download in line to display, use the': 'Attualmente non c\'è nessun download da mostrare, usa il pulsante ',
+    'download button to start downloading files!': 'dowload per cominciare a scaricare!',
     'Peers': 'Peers',
     'More Info': 'Altre informazioni',
     'Remove': 'Rimuovi',
@@ -61,8 +58,6 @@ translations.it_IT = {
     '- You can also add multiple URIs (mirrors) for the *same* file. To do this, separate the URIs by a space.':
         '- Puoi anche aggiungere più URI di download(mirror) per uno *stesso* file separando i vari mirror da uno spazio.',
     '- A URI can be HTTP(S)/FTP/BitTorrent-Magnet.': '- Un URI può essere un indirizzo HTTP(S)/FTP o un BitTorrent Magnet link.',
-    'E.g. to add 2 files (downloads) f1.jpg and f2.mp4 with 2 URIs (mirrors) each, add URIs as follows':
-        'Ad esempio, per scaricare 2 files f1.jpg and f2.mp4 con 2 URIs (mirrors) ciascuno, aggiungi gli indirizzi così',
     'Download settings': 'Impostazioni download',
     'Advanced settings': 'Impostazioni avanzate',
     'Cancel': 'Cancella',
@@ -111,6 +106,7 @@ translations.it_IT = {
         'Se inserito, verrano creati dei link per scaricare direttamente i file dal server Aria2.',
     '(Requires appropriate webserver to be configured.)': '(Richiede un webserver correttamente configurato)',
     'Save Connection configuration': 'Salva la configurazione di connessione',
+    'Filter': 'Filtro',
 // server info modal
     'Aria2 server info': 'Informazioni sul server Aria2',
     'Aria2 Version': 'Versione di Aria2',

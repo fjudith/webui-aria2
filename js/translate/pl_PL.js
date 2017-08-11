@@ -39,9 +39,6 @@ translations.pl_PL = {
     'Paused': 'Zatrzymane',
     'Removed': 'Usunięte',
     'Hide linked meta-data': 'Ukryj zalinkowane meta-dane',
-    'Displaying': 'Wyświetlanie',
-    'of': 'z',
-    'downloads': 'pobranych plików',
     'Toggle': 'Przełącz',
     'Reset filters': 'Reset filtrów',
 // starred properties
@@ -59,7 +56,6 @@ translations.pl_PL = {
 	'- You can add multiple downloads (files) at the same time by putting URIs for each file on a separate line.': '- Możesz dodać wiele pobrań (plików) w tym samym czasie przez wprowadzenie URI dla każdego w oddzielnej linii.',
 	'- You can also add multiple URIs (mirrors) for the *same* file. To do this, separate the URIs by a space.': '- Możesz także dodać wiele URI (luster) dla tego *samego* pliku. Zrób to, poprzez oddzielenie URI od siebie spacją.',
     '- A URI can be HTTP(S)/FTP/BitTorrent-Magnet.': '- URI może być HTTP(S)/FTP/BitTorrent-Magnet.',
-    'E.g. to add 2 files (downloads) f1.jpg and f2.mp4 with 2 URIs (mirrors) each, add URIs as follows': 'Np. aby dodać 2 pliki (pobieranie) f1.jpg i f2.mp4 z 2 URI (lustrami) każdy, dodaj URI jak poniżej',
 	'Download settings': 'Ustawienia pobierania',
     'Advanced settings': 'Zaawansowane ustawienia',
     'Cancel': 'Anuluj',
@@ -103,6 +99,7 @@ translations.pl_PL = {
     'If supplied, links will be created to enable direct download from the Aria2 server.': 'Jeżeli zaznaczone, linki mogą być utworzone do włączenia bezpośredniego pobierania z serwera Aria2',
     '(Requires appropriate webserver to be configured.)': '(Wymaga właściwej konfiguracji serwera WWW)',
     'Save Connection configuration': 'Zapisz konfigurację połączenia',
+    'Filter': 'Filtr',
 // server info modal
     'Aria2 server info': 'Info o serwerze Aria2',
     'Aria2 Version': 'Wersja Aria2',
